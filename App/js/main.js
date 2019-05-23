@@ -27,5 +27,20 @@ jQuery(document).ready(function ($) {
     $('.scroller-product ul li a').click(function(){
          $('.scroller-product ul li').removeClass('active');
          $(this).parent().addClass('active');
-    });
+		});
+		
+
+		$('ul.tabs li span').click(function(){
+			// console.log("ooo")
+			var tab_id = $(this).parent("li").attr('data-tab');
+			console.log(tab_id)
+			$('ul.tabs li span').removeClass('current');
+			$('.tab-content').removeClass('current');
+	
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+		})
+	
 });
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
