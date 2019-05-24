@@ -12,20 +12,48 @@
     <style>
         .scroller-product{
             position: fixed;
-            top: 20%;
-            left: 50px;
+            top: 13%;
+            left: 30px;
             z-index: 9999;
-            background-color: #fff!important;
+            /* background-color: #fff!important; */
             color: #fff!important;
-            width: 27%;
+            width: 20%;
+            transition: all .5s linear
+
         }
-        
+        .services-single-menu {
+            background-color: transparent!important;
+}
         .scroller-product:hover{
             background-color: #fff!important;
-            
         }
-        .product{
-            margin: 0px auto;
+        .menu-scroll{
+            max-height: 530px;
+            overflow-y: scroll;
+        }
+        .menu-scroll::-webkit-scrollbar {
+        width: 0px;
+        }
+        .services-single-menu:hover .menu-scroll::-webkit-scrollbar {
+            width: 3px;
+        }
+        /* Track */
+        .menu-scroll::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+        }
+        /* Handle */
+        .menu-scroll::-webkit-scrollbar-thumb {
+        background: transparent; 
+        border-radius: 1px;
+        }
+        .services-single-menu:hover .menu-scroll::-webkit-scrollbar-thumb {
+        background: red!important; 
+        border-radius: 5px;
+        }
+        /* Handle on hover */
+        .menu-scroll::-webkit-scrollbar-thumb:hover {
+        background: #b30000; 
         }
     </style>
     <link rel="stylesheet" href="css/plugins.css" />
@@ -38,7 +66,7 @@
             <div class="loader-icon"></div>
         </div>
     </div>
-    <div class="main-wrapper">
+    <div id="wrap" class="main-wrapper">
         <header class="header-style1 menu_area-light">
             <div class="navbar-default border-bottom border-color-light-white">
                 <div class="container">
@@ -127,14 +155,25 @@
               <div class="row">
 
                   <!-- start left side section -->
-                  <div class="col-lg-4 col-md-12 padding-50px-right md-padding-30px-right sm-padding-15px-right order-2 order-lg-1">
+                  <div class="col-lg-3 col-md-12 padding-50px-right md-padding-30px-right sm-padding-15px-right order-2 order-lg-1">
 
                       <!-- start services -->
-                      <div id="scroller-product" class="scroller-product services-single-left-box">
+                      <div id="scroller-product" class=" services-single-left-box">
                           <h6 class="font-weight-700 font-size16 sm-font-size14 text-uppercase left-title margin-20px-bottom">Modullar</h6>
                           <div  class=" services-single-menu bg-light-gray margin-30px-bottom sm-margin-25px-bottom">
-                              <ul class=" no-margin">
+                              <ul class="menu-scroll no-margin">
                                   <li class="active" "><a href="#tab-1">24/7</a></li>
+                                  <li><a href="#tab-2">CALLER ID</a></li>
+                                  <li><a href="#tab-3">AUTO FORWARD</a></li>
+                                  <li><a href="#tab-4">MULTI LEVEL SECURITY</a></li>
+                                  <li><a href="#tab-5">IVR SYSTEM</a></li>
+                                  <li><a href="#tab-6">VOICE MESSAGE</a></li>
+                                  <li class="active" "><a href="#tab-1">24/7</a></li>
+                                  <li><a href="#tab-2">CALLER ID</a></li>
+                                  <li><a href="#tab-3">AUTO FORWARD</a></li>
+                                  <li><a href="#tab-4">MULTI LEVEL SECURITY</a></li>
+                                  <li><a href="#tab-5">IVR SYSTEM</a></li>
+                                  <li><a href="#tab-6">VOICE MESSAGE</a></li>
                                   <li><a href="#tab-2">CALLER ID</a></li>
                                   <li><a href="#tab-3">AUTO FORWARD</a></li>
                                   <li><a href="#tab-4">MULTI LEVEL SECURITY</a></li>
@@ -150,7 +189,7 @@
                   <!-- end left side section -->
 
                   <!-- start right side section -->
-                  <div class="col-lg-8 col-md-12 order-1 order-lg-2 sm-margin-30px-bottom">
+                  <div class="col-lg-9 col-md-12 order-1 order-lg-2 sm-margin-30px-bottom">
                       <div id="tab-1" class="services-single-right margin-100px-bottom" >
                           <h5 class="font-weight-600">24/7</h5>
                           <p>Çağrı mərkəzi üçün yaradılmış etibarlı və səmərəli proqram təminatı olan ProCALL gün ərzində 24 saat, həftədə 7 gün ərzində təyinatından asılı olmayaraq, daxil olan zəngləri – məlumat, müraciət, şikayət və s. - fasiləsiz şəkildə və minimal gözləmə vaxtı ilə emal etməyə imkan yaradır. Müştəri özünü etibarlı əllərdə hiss etdikcə, xidməti təqdim edən şirkət də etibarlı və etimada layiq hesab olunur. 
@@ -264,7 +303,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-right xs-text-center">
-                        <p class="xs-margin-5px-top xs-font-size13">&copy; PRONET MMC 2003-<span id="year"></span>. Bütün hüquqlar qorunur</p>
+                        <p class="xs-margin-5px-top xs-font-size13">&copy; PRONET MMC 2003-<span class="text" id="year"></span>. Bütün hüquqlar qorunur</p>
                     </div>
                 </div>
             </div>
@@ -280,7 +319,23 @@
     <script src="js/main.js"></script>
     <script src="js/mailform/jquery.form.min.js"></script>
     <script src="js/mailform/jquery.rd-mailform.min.c.js"></script>
-   
+    <script>
+    
+    
+    window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("scroller-product");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > 455) {
+      console.log("jndenjnj")
+    header.classList.add("scroller-product");
+  } else {
+    header.classList.remove("scroller-product");
+  }
+}
+</script>
 </body>
 
 </html>

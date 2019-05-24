@@ -23,24 +23,38 @@ jQuery(document).ready(function ($) {
 			}
 		}
     });
-    
     $('.scroller-product ul li a').click(function(){
          $('.scroller-product ul li').removeClass('active');
          $(this).parent().addClass('active');
 		});
-		
-
 		$('ul.tabs li span').click(function(){
-			// console.log("ooo")
 			var tab_id = $(this).parent("li").attr('data-tab');
-			console.log(tab_id)
 			$('ul.tabs li span').removeClass('current');
 			$('.tab-content').removeClass('current');
-	
-			$(this).addClass('current');
+			$("ul.tabs li").removeClass('active');
+			$(this).parent("li").addClass('active');
 			$("#"+tab_id).addClass('current');
 		})
-	
+		///acordeon tabs
+		$('.tabs .card button').click(function(){
+			console.log("oooo")
+			var tab_id = $(this).attr('data-tab');
+			$('.tab-content').removeClass('current');
+			$("#"+tab_id).addClass('current');
+		})
+
+		var wrap = $("body");
+
+wrap.on("scroll", function(e) {
+    
+  if (this.scrollTop > 147) {
+		console.log("uidufiujj")
+    $("#scroller-product").addClass("scroller-product");
+  } else {
+    $("#scroller-product").removeClass("scroller-product");
+  }
+  
+});
 });
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
