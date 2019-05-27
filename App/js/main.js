@@ -27,6 +27,7 @@ jQuery(document).ready(function ($) {
          $('.scroller-product ul li').removeClass('active');
          $(this).parent().addClass('active');
 		});
+		////tabs
 		$('ul.tabs li span').click(function(){
 			var tab_id = $(this).parent("li").attr('data-tab');
 			$('ul.tabs li span').removeClass('current');
@@ -35,26 +36,6 @@ jQuery(document).ready(function ($) {
 			$(this).parent("li").addClass('active');
 			$("#"+tab_id).addClass('current');
 		})
-		///acordeon tabs
-		$('.tabs .card button').click(function(){
-			console.log("oooo")
-			var tab_id = $(this).attr('data-tab');
-			$('.tab-content').removeClass('current');
-			$("#"+tab_id).addClass('current');
-		})
-
-		var wrap = $("body");
-
-wrap.on("scroll", function(e) {
-    
-  if (this.scrollTop > 147) {
-		console.log("uidufiujj")
-    $("#scroller-product").addClass("scroller-product");
-  } else {
-    $("#scroller-product").removeClass("scroller-product");
-  }
-  
-});
 });
 
 document.getElementById("year").innerHTML = new Date().getFullYear();

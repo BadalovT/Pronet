@@ -1,0 +1,134 @@
+ul.social-network {
+  list-style: none;
+  display: none;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li, .chat-icon li {
+  display: block;
+  margin: 5px;
+}
+
+.chatapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.chat-icon {
+  position: relative;
+  cursor: pointer;
+  margin-left: 0 !important;
+  padding: 0;
+  text-align: center;
+}
+
+.social-circle li a, .chat-icon li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  width: 51px;
+  height: 51px;
+  background-image: url('../img/chat-sprite.png');
+  background-repeat: no-repeat;
+}
+
+.chat {
+  background-position: 0 0;
+}
+
+.vk {
+  background-position: 0 -61px;
+}
+
+.wp {
+  background-position: 0 -122px;
+}
+
+.zeng {
+  background-position: 0 -182px;
+}
+
+.fb {
+  background-position: 0 -243px;
+}
+
+.chat-close li a {
+  background-position: 0 0px;
+}
+
+.chat-open li a {
+  background-position: 0 -303px;
+}
+
+.social-network li.wp-com {
+  display: block;
+}
+
+.social-network li.wp-mobile {
+  display: none;
+}
+
+@media (max-width:768px) {
+  .social-network li.wp-mobile {
+    display: block;
+  }
+  .social-network li.wp-com {
+    display: none;
+  }
+}
+
+.chat-close::before {
+  content: "";
+  animation: bounce 1.5s infinite;
+}
+
+.chat-close::after {
+  content: "";
+  animation: bounce 1.5s -0.4s infinite;
+}
+
+.chat-close::before, .chat-close::after {
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -28px;
+  position: absolute;
+  vertical-align: middle;
+  background: #31AF91;
+  width: 50px;
+  z-index: -55;
+  height: 50px;
+  border-radius: 50%;
+	/* animation-delay: 1s; */
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    opacity: 0;
+  }
+}
