@@ -165,7 +165,7 @@
                                       <div class="card-body">
                                           <div class="row">
                                               <div class="col-lg-6 col-md-6 col-sm-12">
-                                                  <div class="current box-shadow-large padding-15px-all">
+                                                  <div class="current box-shadow-large">
                                                       <img src="img/content/content-04.jpg" alt=""
                                                           class="sm-width-100">
                                                   </div>
@@ -212,7 +212,7 @@
                                       <div class="card-body">
                                           <div class="row">
                                               <div class="col-lg-6">
-                                                  <div class="box-shadow-large padding-15px-all">
+                                                  <div class="box-shadow-large ">
                                                       <img src="img/content/content-03.jpg" alt=""
                                                           class="sm-width-100">
                                                   </div>
@@ -260,7 +260,7 @@
                                       <div class="card-body">
                                           <div class="row">
                                               <div class="col-md-6">
-                                                  <div class="box-shadow-large padding-15px-all">
+                                                  <div class="box-shadow-large ">
                                                       <img src="img/content/content-01.jpg" alt=""
                                                           class="sm-width-100">
                                                   </div>
@@ -307,7 +307,7 @@
                                       <div class="card-body">
                                           <div class="row">
                                               <div class="col-md-6">
-                                                  <div class="box-shadow-large padding-15px-all">
+                                                  <div class="box-shadow-large ">
                                                       <img src="img/content/content-02.jpg" alt=""
                                                           class="sm-width-100">
                                                   </div>
@@ -356,7 +356,7 @@
                                       <div class="card-body">
                                           <div class="row">
                                               <div class="col-md-6">
-                                                  <div class="box-shadow-large padding-15px-all">
+                                                  <div class="box-shadow-large ">
                                                       <img src="img/content/feature-04.jpg" alt=""
                                                           class="sm-width-100">
                                                   </div>
@@ -404,7 +404,7 @@
                                       <div class="card-body">
                                           <div class="row">
                                               <div class="col-md-6">
-                                                  <div class="box-shadow-large padding-15px-all">
+                                                  <div class="box-shadow-large ">
                                                       <img src="img/content/content-01.jpg" alt=""
                                                           class="sm-width-100">
                                                   </div>
@@ -529,7 +529,7 @@
               </div>
           </div>
          </footer>
-         <div id="scroller-product" class="scroller-product services-single-menu bg-light-gray margin-30px-bottom sm-margin-25px-bottom">
+         <div id="scroller-product" class="text-white scroller-product services-single-menu bg-light-gray margin-30px-bottom sm-margin-25px-bottom">
             <ul class="no-margin">
                 <li class="active"><a href="procall.html">ProCall</a></li>
                 <li><a href="prodoc.html">ProDoc</a></li>
@@ -618,7 +618,20 @@
     <script src="js/main.js"></script>
     <script src="js/mailform/jquery.form.min.js"></script>
     <script src="js/mailform/jquery.rd-mailform.min.c.js"></script>
+    <script>
+        window.onscroll = function () { myFunction() };
+        var header = document.getElementById("scroller-product");
+        // var sticky = header.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset < 250) {
+                header.classList.add("text-white");
 
+
+            } else {
+                header.classList.remove("text-white");
+            }
+        }
+    </script>
 </body>
 
 </html>

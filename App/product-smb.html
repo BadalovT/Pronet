@@ -149,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row padding-30px-right md-padding-20px-right sm-no-padding-right">
                 <div class="col-lg-6 col-md-6 col-sm-12  sm-margin-30px-bottom">
                 </div>
                 <div class="col-lg-6 col-md-6 align-items-center padding-15px-all col-sm-12 sm-margin-30px-bottom" "="">
@@ -215,7 +215,7 @@
             </div>
         </div>
     </footer>
-        <div id="scroller-product" class="scroller-product services-single-menu bg-light-gray margin-30px-bottom sm-margin-25px-bottom">
+        <div id="scroller-product" class="text-white scroller-product services-single-menu bg-light-gray margin-30px-bottom sm-margin-25px-bottom">
             <ul class="no-margin">
                 <li class="active"><a href="#protask">ProTask</a></li>
                 <li><a href="#proorder">ProOrder</a></li>
@@ -226,6 +226,20 @@
     <script src="js/main.js"></script>
     <script src="js/mailform/jquery.form.min.js"></script>
     <script src="js/mailform/jquery.rd-mailform.min.c.js"></script>
+    <script>
+        window.onscroll = function () { myFunction() };
+        var header = document.getElementById("scroller-product");
+        // var sticky = header.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset < 250) {
+                header.classList.add("text-white");
+
+
+            } else {
+                header.classList.remove("text-white");
+            }
+        }
+    </script>
 </body>
 
 </html>
