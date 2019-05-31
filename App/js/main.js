@@ -19,15 +19,6 @@ jQuery(document).ready(function ($) {
          $('.scroller-product ul li').removeClass('active');
          $(this).parent().addClass('active');
 		});
-		////tabs
-		// $('ul.tabs li span').click(function(){
-		// 	var tab_id = $(this).parent("li").attr('data-tab');
-		// 	$('ul.tabs li span').removeClass('current');
-		// 	$('.tab-content').removeClass('current');
-		// 	$("ul.tabs li").removeClass('active');
-		// 	$(this).parent("li").addClass('active');
-		// 	$("#"+tab_id).addClass('current');
-		// })
 });
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
