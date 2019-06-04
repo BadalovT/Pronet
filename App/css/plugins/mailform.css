@@ -81,6 +81,7 @@
   padding: 14px 18px;
   border: 2px solid rgba(0,0,0,.1);
   color: #888;
+  background-color: #fff;
 }
 .mfSelect .value:after {
   width: 0; 
