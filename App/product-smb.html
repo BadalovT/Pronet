@@ -48,7 +48,7 @@
                                                         məhsullar</a>
                                                     <ul>
                                                         <li><a href="procall.html">ProCall</a></li>
-                                                        <li><a href="proid.html">ProId</a></li>
+                                                        <li><a href="proid.html">ProID</a></li>
                                                         <li><a href="prodoc.html">ProDoc</a></li>
                                                         <li><a href="proask.html">ProAsk</a></li>
                                                         <li><a href="proschool.html">ProSchool</a></li>
@@ -169,7 +169,7 @@
             data-toggle="modal" data-target="#ProductModal"><span class="cnt"><span class="cnt">Təqdimat
                     sifarişi</span><span class="loader"></span><span class="msg"></span></span><span
                 class="loader"></span><span class="msg"></span></button>
-            <a href="proid.html" class="butn  float-right mfProgress  margin-10px-right text-white"
+            <a href="proorder.htm" class="butn  float-right mfProgress  margin-10px-right text-white"
                 style="background-color: #d73f41"><span class="cnt">Ətraflı</span></a>
         </div>
     </div>
@@ -244,6 +244,66 @@
             </div>
         </div>
     </footer>
+    <div class="modal fade bd-example-modal-lg  z-index-1111" id="ProductModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="exampleModalLongTitle" class="modal-title font-weight-600 margin-15px-bottom">Sifariş
+                        forması</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="product-modal width-85">
+                        <form method="post" action="bat/rd-mailform.php" class="mailform off2">
+                            <input type="hidden" name="form-type" value="contact">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Ad :">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="phone" placeholder="Telefon:">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Soyad :">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="email" placeholder="Email :">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Şirkətin adı :">
+                                </div>
+                                <div class="col-md-6 margin-15px-bottom">
+                                    <div class="select-option select-departments">
+                                        <select name="departments">
+                                            <option value="">Məhsul</option>
+                                            <option value="ProCall">ProCall</option>
+                                            <option value="ProDoc">ProDoc</option>
+                                            <option value="ProID">ProID</option>
+                                            <option value="ProAsk">ProAsk</option>
+                                            <option value="ProScholl">ProScholl</option>
+                                            <option value="ProCRM">ProCRM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Ünvan :">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="phone" placeholder="Mob:">
+                                </div>
+                                <div class="mfControls col-md-6">
+                                    <button type="submit" class="butn">Göndər</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="scroller-product"
         class="text-white scroller-product services-single-menu bg-light-gray margin-30px-bottom sm-margin-25px-bottom">
         <ul class="no-margin">
